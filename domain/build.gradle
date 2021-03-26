@@ -1,0 +1,18 @@
+plugins {
+    id("java-library")
+    id("kotlin")
+
+}
+apply plugin: 'kotlin-android-extensions'
+
+dependencies {
+    api domainDependencies.kotlin
+    api domainDependencies.coroutinesCore
+}
+
+sourceCompatibility = JavaVersion.VERSION_1_8.toString()
+targetCompatibility = JavaVersion.VERSION_1_8.toString()
+
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
+}
