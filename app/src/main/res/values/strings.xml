@@ -3,10 +3,10 @@
     <string name="error_check_internet_connection">Error</string>
     <string name="error_oops_error_occurred">Error loading data...</string>
     <string name="info_no_vehicles">No vehicles</string>
-    <string name="template_coordinate">Latitude / Longitude: %f / %f</string>
+    <string name="template_coordinate">LAT / LONG: %f / %f</string>
     <string name="template_coordinate_2">%f / %f</string>
     <string name="template_heading">%f</string>
-    <string name="title_list_vehicle">Vehicles</string>
+    <string name="title_list_vehicle">Vehicles in Hamburg</string>
     <string name="title_about">"About"</string>
     <string name="helios_test_author">This test has been developed by Cesar Sosa</string>
     <string name="title_activity_maps">Map</string>
