@@ -78,6 +78,7 @@ ext {
             koinLifeCycleScope    : "org.koin:koin-android-scope:$koinVersion",
             koinAndroidViewModel  : "org.koin:koin-androidx-viewmodel:$koinVersion",
             stetho                : "com.facebook.stetho:stetho:$stethoVersion",
+            stethoOkHttp          : "com.facebook.stetho:stetho-okhttp3:$stethoVersion",
             kiel                  : "me.ibrahimyilmaz:kiel:$kielVersion",
             lottie                : "com.airbnb.android:lottie:$lottieVersion"
     ]

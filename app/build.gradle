@@ -82,6 +82,7 @@ dependencies {
 
     //Stetho
     implementation appDependencies.stetho
+    implementation appDependencies.stethoOkHttp
 
     //Animations
     implementation appDependencies.recyclerviewAnimations

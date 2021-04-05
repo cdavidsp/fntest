@@ -2,6 +2,7 @@ package com.csosa.fntest.di
 
 import com.csosa.fntest.data.remote.api.FNTestApiService
 import com.csosa.fntest.data.remote.api.GoogleMapsApiService
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.core.qualifier.named
@@ -27,11 +28,13 @@ internal fun provideOkHttpClient(): OkHttpClient {
     val httpLoggingInterceptor = HttpLoggingInterceptor().apply {
         level = HttpLoggingInterceptor.Level.BODY
     }
+
     return OkHttpClient.Builder()
-        .connectTimeout(60L, TimeUnit.SECONDS)
-        .readTimeout(60L, TimeUnit.SECONDS)
-        .addInterceptor(httpLoggingInterceptor)
-        .build()
+            .connectTimeout(60L, TimeUnit.SECONDS)
+            .readTimeout(60L, TimeUnit.SECONDS)
+            .addInterceptor(httpLoggingInterceptor)
+            .addNetworkInterceptor(StethoInterceptor())
+            .build()
 }
 
 internal fun provideRetrofit(okHttpClient: OkHttpClient, url: String): Retrofit {
