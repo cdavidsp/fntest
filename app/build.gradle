@@ -1,3 +1,16 @@
+ext.versionMajor = 1
+ext.versionMinor = 0
+ext.versionPatch = 0
+
+def computeVersionName() {
+    return String.format('%d.%d.%d', versionMajor, versionMinor, versionPatch)
+}
+
+def computeVersionCode() {
+    return (versionMajor * 1000000) + (versionMinor * 100000) + (versionPatch * 10000) + Integer.valueOf(System.env.BUILD_NUMBER ?: 0)
+}
+
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -15,11 +28,25 @@ android {
         applicationId "com.csosa.fntest"
         minSdkVersion minSdk
         targetSdkVersion targetSdk
-        versionCode versionCodeMajor * 10000 + versionCodeMinor * 100 + versionCodePatch
-        versionName versionName
-        testInstrumentationRunner "com.csosa.fntest.runner.MockTestRunner"
+ //      versionCode versionCodeMajor * 10000 + versionCodeMinor * 100 + versionCodePatch
+  //      versionName versionName
+
+        versionName computeVersionName()
+        versionCode computeVersionCode()
+    
+    testInstrumentationRunner "com.csosa.fntest.runner.MockTestRunner"
 
     }
+
+    signingConfigs {
+        config {
+            keyAlias alias
+            keyPassword keyPass
+            storeFile file(keystore)
+            storePassword storePass
+        }
+    }
+
     buildTypes {
 
         release {
