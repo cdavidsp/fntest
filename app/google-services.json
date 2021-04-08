@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977499147462",
+    "project_id": "fntest-a20ed",
+    "storage_bucket": "fntest-a20ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977499147462:android:937d87fa52214462179bc7",
+        "android_client_info": {
+          "package_name": "com.csosa.fntest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977499147462-k0rtrp3hiur9ket41d6799pi4ekpi9r0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkQWWXkQ1c0GmAzOr3efREe_EmsVDgSMQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977499147462-k0rtrp3hiur9ket41d6799pi4ekpi9r0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

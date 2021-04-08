@@ -21,6 +21,22 @@ platform :android do
     gradle(task: "test")
   end
 
+  desc "Distribute"
+  lane :distribute do
+    gradle(
+        task: "assemble",
+        build_type: "Debug"
+        )
+
+    firebase_app_distribution(
+        app: "1:977499147462:android:937d87fa52214462179bc7",
+        testers: "cesarsosa.p@gmail.com",
+        release_notes: "Lots of amazing new features to test out!",
+        firebase_cli_path: “/usr/local/bin/firebase”
+    )
+
+    end
+
   desc "Submit a new Beta Build to Crashlytics Beta"
   lane :beta do
     gradle(task: "clean assembleRelease")

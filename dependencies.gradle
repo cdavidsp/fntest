@@ -12,7 +12,7 @@ ext {
     // App Versioning
     versionCodeMajor = 3
     versionCodeMinor = 1
-    versionCodePatch = 1
+    versionCodePatch = 3
     versionName = "$versionCodeMajor.$versionCodeMinor.$versionCodePatch"
 
     // Dependencies Version - Presentation

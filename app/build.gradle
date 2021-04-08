@@ -4,7 +4,10 @@ plugins {
     id("kotlin-android-extensions")
     id("kotlin-kapt")
     id("com.mikepenz.aboutlibraries.plugin")
+    id("com.google.gms.google-services")
+    id("com.google.firebase.crashlytics")
 }
+
 apply from: "jacoco.gradle"
 android {
 
@@ -32,7 +35,7 @@ android {
 
         debug {
             minifyEnabled false
-            applicationIdSuffix ".debug"
+            //applicationIdSuffix ".debug"
             versionNameSuffix "-debug"
             manifestPlaceholders = [crashlyticsEnabled: false]
             testCoverageEnabled true
@@ -108,7 +111,9 @@ dependencies {
 
     implementation appDependencies.lottie
 
-
+    implementation platform('com.google.firebase:firebase-bom:26.8.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
     //Test Libs
     testImplementation testDependencies.junit
     testImplementation testDependencies.robolectric

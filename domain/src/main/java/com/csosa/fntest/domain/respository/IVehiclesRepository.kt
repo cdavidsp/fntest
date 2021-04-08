@@ -7,5 +7,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface IVehiclesRepository {
 
-    suspend fun getVehiclesbyBounds(apiKey: String, location: Coordinate, bounds: Bounds): Flow<List<Vehicle>>
+    suspend fun getVehiclesByBounds(apiKey: String, location: Coordinate, bounds: Bounds): Flow<List<Vehicle>>
 }

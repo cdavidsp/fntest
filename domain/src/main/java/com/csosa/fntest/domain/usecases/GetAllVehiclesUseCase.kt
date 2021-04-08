@@ -13,7 +13,7 @@ class GetAllVehiclesUseCase(
 ) : GetAllVehiclesBaseUseCase {
 
     override suspend fun invoke(params: GetAllVehiclesUseCaseInput)
-            = vehiclesRepository.getVehiclesbyBounds(params.apiKey, params.location, params.bounds)
+            = vehiclesRepository.getVehiclesByBounds(params.apiKey, params.location, params.bounds)
 
 }
 class GetAllVehiclesUseCaseInput(

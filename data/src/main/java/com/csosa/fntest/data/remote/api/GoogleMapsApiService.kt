@@ -10,7 +10,8 @@ interface GoogleMapsApiService {
     suspend fun getDistanceMatrix(
         @Query(value="origins") origins: String,
         @Query(value="destinations") destinations: String,
-        @Query(value="key") key: String
+        @Query(value="key") key: String,
+        @Query(value="region") region: String
     ): GoogleMapsMatrixResponse
 
 }

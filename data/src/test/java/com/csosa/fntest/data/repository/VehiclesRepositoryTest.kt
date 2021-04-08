@@ -38,7 +38,7 @@ internal class VehiclesRepositoryTest : BaseTest() {
     fun `when all vehicles are requested at the first time, then return all from api `() {
         runBlocking(Dispatchers.IO) {
 
-            val vehiclesFlow = vehiclesRepository.getVehiclesbyBounds("", bounds.center, bounds)
+            val vehiclesFlow = vehiclesRepository.getVehiclesByBounds("", bounds.center, bounds)
             val numberOfVehicles = 8 // in my_taxi.json
 
             vehiclesFlow.collect { vehicles ->
@@ -51,8 +51,8 @@ internal class VehiclesRepositoryTest : BaseTest() {
     fun `when all vehicles are requested at the second time, then return all from db `() {
         runBlocking(Dispatchers.IO) {
 
-            val vehiclesFlow = vehiclesRepository.getVehiclesbyBounds("", bounds.center, bounds)
-            val numberOfVehicles = 8 // in post.json
+            val vehiclesFlow = vehiclesRepository.getVehiclesByBounds("", bounds.center, bounds)
+            val numberOfVehicles = 8 // in my_taxi.json
             var firstVehicleId: Long? = null
 
             //First time
